@@ -5,10 +5,9 @@ import {
   signInWithEmailAndPassword,
   onAuthStateChanged,
   signOut
-} from 'firebase/auth';
+} from "firebase/auth";
 
-import {getFirestore} from 'firebase/firestore'
-
+import { getFirestore, setDoc, doc,collection, addDoc} from "firebase/firestore";
 
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
@@ -19,20 +18,22 @@ const firebaseConfig = {
   storageBucket: "distribuidorasoto-1dac3.appspot.com",
   messagingSenderId: "947105004271",
   appId: "1:947105004271:web:d77d9640c1f4cc195f391a",
-  measurementId: "G-KQRF59XXZX"
+  measurementId: "G-KQRF59XXZX",
 };
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app);
 
-
-export{
-    app,
-    auth,
-    db,
-    signInWithEmailAndPassword,
-    onAuthStateChanged,
-    signOut
-}
-
+export {
+  app,
+  auth,
+  db,
+  setDoc,
+  doc,
+  addDoc,
+  collection,
+  signInWithEmailAndPassword,
+  onAuthStateChanged,
+  signOut,
+};

@@ -6,7 +6,7 @@ export const LoadingPage = () => {
     <div className="container-loading">
       <div className="loader">
         <img
-          src={window.location.origin + "/assets/img/logoDistribuidora.png"}
+          src={window.location.origin + "/assets/img/logoInicio.png"}
           alt="Logo  Distribuidora"
         />
       </div>

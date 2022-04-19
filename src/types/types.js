@@ -9,5 +9,9 @@ export const types = {
   
   //UI Types
   uiStartLoading:'[UI] Start Loading',
-  uiFinishLoading:'[UI] Finish Loading'
+  uiFinishLoading:'[UI] Finish Loading',
+
+  //PRODUCT Types
+  productAddNew:'[PROD] New Prod',
+  productsLoad:'[PROD] Load Products'
 };

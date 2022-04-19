@@ -7,13 +7,14 @@ import { startLoginWithEmailPassword } from "../../actions/auth";
 import { FinishLoading } from "../../actions/ui";
 import { useForm } from "../../hooks/useForm";
 import "./loginStyle.css";
+import { Link } from "react-router-dom";
 
 export const LoginScreen = () => {
   const dispatch = useDispatch();
 
   const [formValues, handleInputChange] = useForm({
-    email: "distribuidorasoto@gmail.com",
-    password: "123456789",
+    email: "darwin.soto@distribuidorasoto.com",
+    password: "distribuidora_soto",
   });
 
   const { email, password } = formValues;
@@ -37,13 +38,13 @@ export const LoginScreen = () => {
       dispatch(FinishLoading());
       return false;
     } else if (validator.isEmpty(password) || password < 6) {
-        Swal.fire({
-          position: "center",
-          icon: "error",
-          title: "Usuario/Password - Incorrectos",
-          showConfirmButton: false,
-          timer: 2000,
-        });
+      Swal.fire({
+        position: "center",
+        icon: "error",
+        title: "Usuario/Password - Incorrectos",
+        showConfirmButton: false,
+        timer: 2000,
+      });
       dispatch(FinishLoading());
       return false;
     }
@@ -95,6 +96,13 @@ export const LoginScreen = () => {
                       </button>
                     </div>
                   </form>
+                  <ul className="list-unstyled text-center mt-5">
+                    <li className="list-inline-item border rounded-circle text-center">
+                      <Link to="/" className="link-secondary">
+                        <p><i className="fa fa-arrow-left" aria-hidden="true">  Ir a página principal....</i></p>
+                      </Link>
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>

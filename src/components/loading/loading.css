@@ -20,6 +20,7 @@
   height: 150px;
   animation: spinloader 3s linear infinite;
 }
+
 .loader img {
   height: 90px;
   width: 90px;
@@ -30,8 +31,9 @@
   margin: 0 15px;
   width: 40px;
   height: 15px;
+  border: 2px solid #af0236;
   border-radius: 20px;
-  background: #ff2cbd;
+  background: #af0236cc;
   box-shadow: 0 0 10px 0 #fecdff;
 }
 
