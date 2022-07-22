@@ -7,7 +7,7 @@ import {
   signOut
 } from "firebase/auth";
 
-import { getFirestore, setDoc, doc,collection, addDoc} from "firebase/firestore";
+import { getFirestore, setDoc, doc, collection, addDoc, getDocs, getDoc, where, query, startAt, endAt, orderBy } from "firebase/firestore";
 
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
@@ -36,4 +36,11 @@ export {
   signInWithEmailAndPassword,
   onAuthStateChanged,
   signOut,
+  getDocs,
+  getDoc,
+  where,
+  query,
+  startAt, 
+  endAt,
+  orderBy
 };

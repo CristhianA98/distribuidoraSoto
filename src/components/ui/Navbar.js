@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
-import { useDispatch,useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { startLogout } from "../../actions/auth";
 
 export const Navbar = () => {
@@ -20,7 +20,7 @@ export const Navbar = () => {
           <div className="container d-flex justify-content-between align-items-center">
             <Link to="/">
               <img
-                src={window.location.origin +"/assets/img/logoInicio.png"}
+                src={window.location.origin + "/assets/img/logoInicio.png"}
                 alt="LogoInicio"
                 width="45px"
               />
@@ -64,7 +64,7 @@ export const Navbar = () => {
                   </li>
                 </ul>
               </div>
-              
+
               <div className="navbar align-self-center d-flex">
                 {isLogged && (
                   <Link
@@ -75,6 +75,14 @@ export const Navbar = () => {
                   >
                     <i className="fa fa-fw fa-user text-main mr-3" /> Logout
                   </Link>
+                )}
+
+                {!isLogged && (
+                  <>
+                    <a className="nav-icon d-lg-inline" href="#" data-bs-toggle="modal" data-bs-target="#templatemo_search">
+                      <i className="fa fa-fw fa-search text-main mr-2"></i>
+                    </a>
+                  </>
                 )}
 
                 <Link
@@ -93,7 +101,7 @@ export const Navbar = () => {
           <div className="container d-flex justify-content-between align-items-center">
             <Link to="/admin">
               <img
-                src={window.location.origin +"/assets/img/logoInicio.png"}
+                src={window.location.origin + "/assets/img/logoInicio.png"}
                 alt="LogoInicio"
                 width="45px"
               />
@@ -121,12 +129,12 @@ export const Navbar = () => {
                     </NavLink>
                   </li>
                   <li className="nav-item">
-                    <NavLink className="nav-link h3"  to="/admin/ingresarProducto">
+                    <NavLink className="nav-link h3" to="/admin/ingresarProducto">
                       Ingresar
                     </NavLink>
                   </li>
                   <li className="nav-item">
-                    <NavLink className="nav-link h3" to="/admin">
+                    <NavLink className="nav-link h3" to="/admin/listado">
                       Listado
                     </NavLink>
                   </li>
@@ -146,6 +154,7 @@ export const Navbar = () => {
           </div>
         )}
       </nav>
+
     </>
   );
 };

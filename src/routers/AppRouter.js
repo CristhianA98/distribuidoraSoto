@@ -12,6 +12,7 @@ import { auth, onAuthStateChanged } from "../firebase/firebase-config";
 import { AdminRoutes } from "./AdminRoutes";
 import { PrivateRoute } from "./PrivateRoutes";
 import { PublicRoute } from "./PublicRoutes";
+import { ProductView } from "../components/appSoto/ProductView";
 
 export const AppRouter = () => {
   const dispatch = useDispatch();
@@ -58,6 +59,7 @@ export const AppRouter = () => {
         />
         
         <Route path="/" element={<AppSotoScreen />} />
+        <Route path="/product/:id" element={<ProductView />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
     </BrowserRouter>

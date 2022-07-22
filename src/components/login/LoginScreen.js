@@ -61,7 +61,7 @@ export const LoginScreen = () => {
             <div className="container">
               <div className="row">
                 <div className="col-lg-10 col-xl-7 mx-auto">
-                  <h3 className="display-3">Bienvenido!</h3>
+                  <h3 className="display-3 text-main">Bienvenido!</h3>
                   <p className="text-muted mb-4">
                     Gestión de los productos en stock
                   </p>
@@ -90,7 +90,7 @@ export const LoginScreen = () => {
                     <div className="d-grid gap-2">
                       <button
                         type="submit"
-                        className="btn btn-outline-dark text-uppercase mt-3 rounded-pill shadow-sm"
+                        className="btn btn-outline-main text-uppercase mt-3 rounded-pill shadow-sm"
                       >
                         Ingresar
                       </button>

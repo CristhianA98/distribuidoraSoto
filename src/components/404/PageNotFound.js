@@ -9,7 +9,7 @@ export const PageNotFound = () => {
     >
       <img
         src="/assets/img/logoDistribuidora.png"
-        class="rounded float-start"
+        className="rounded float-start"
         alt="..."
       ></img>
       <h1 className="mx-3 px-3 align-top border-right inline-block align-content-center">

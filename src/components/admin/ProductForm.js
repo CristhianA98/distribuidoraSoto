@@ -87,7 +87,7 @@ export const ProductForm = () => {
   };
 
   return (
-    <div className="container w-50 pt-3">
+    <div className="container w-50 pt-3 animate__animated animate__fadeIn">
       <h2 className="display-7 text-center fst-italic text-main py-3">
         Ingresar Producto
       </h2>
@@ -100,7 +100,7 @@ export const ProductForm = () => {
               </label>
               <input
                 type="text"
-                value={nombre}
+                value={nombre.toUpperCase()}
                 onChange={handleInputChange}
                 className="form-control mt-1"
                 id="name"
@@ -136,7 +136,7 @@ export const ProductForm = () => {
               <option value={provincia}>Selecciona la provincia</option>
               {provincias.map((provincia) => (
                 <option
-                  value={provincia.idProvincia}
+                  value={provincia.nombreProvincia}
                   key={provincia.idProvincia}
                 >
                   {provincia.nombreProvincia}

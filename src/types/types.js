@@ -13,5 +13,7 @@ export const types = {
 
   //PRODUCT Types
   productAddNew:'[PROD] New Prod',
-  productsLoad:'[PROD] Load Products'
+  productsLoad:'[PROD] Load Products',
+  productActive:'[PROD] Load one Product',
+  productUpdate:'[PROD] Product Update'
 };
